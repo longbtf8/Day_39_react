@@ -6,7 +6,7 @@ const createStore = (reducer, preloadedState) => {
       return state;
     },
     dispatch: (action) => {
-      reducer(state, action);
+      state = reducer(state, action);
       listeners.forEach((listener) => listener());
     },
     subscribe: (listener) => {
