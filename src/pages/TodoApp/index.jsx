@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useDispatch, useSelector } from "../../libs/react-redux/hook";
+import { useDispatch, useSelector } from "../../libs/react-redux";
 import ACTION from "../../store/constants";
 
 const ToDoApp = () => {
