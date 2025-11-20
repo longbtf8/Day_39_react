@@ -21,6 +21,7 @@ export const useSelector = (selector) => {
         '"Selector unknown returned a different result when called with the same parameters. This can lead to unnecessary rerenders." '
       );
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   useEffect(() => {
     const unsubscribe = store.subscribe(() => {
