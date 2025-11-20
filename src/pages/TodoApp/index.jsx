@@ -77,17 +77,27 @@ const ToDoApp = () => {
       </form>
       <div>
         <p className="text-green-500">Danh sách Todo</p>
-        {/* {todoList.map((todo) => (
+        {todoList.map((todo) => (
           <div className="border-2 flex p-1 gap-1.5 mb-2" key={todo.id}>
             <span className="flex-1">{todo.text}</span>
-            <button className="border-2 px-1 text-blue-500 border-black rounded-sm">
+            <button
+              className="border-2 px-1 text-blue-500 border-black rounded-sm"
+              onClick={() => {
+                handleEditTodo(todo.id, todo.text);
+              }}
+            >
               Edit
             </button>
-            <button className="border-2 px-1 text-blue-500 border-black rounded-sm">
+            <button
+              className="border-2 px-1 text-blue-500 border-black rounded-sm"
+              onClick={() => {
+                handleDeleteTodo(todo.id);
+              }}
+            >
               Delete
             </button>
           </div>
-        ))} */}
+        ))}
       </div>
     </div>
   );

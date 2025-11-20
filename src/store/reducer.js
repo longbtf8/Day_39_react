@@ -27,8 +27,15 @@ const reducer = (state = initState, action) => {
         todoList: editTodo,
       };
     }
-    case ACTION.DELETE_TODO:
-      break;
+    case ACTION.DELETE_TODO: {
+      const newTodos = state.todoList.filter(
+        (todo) => todo.id != action.payload.id
+      );
+      return {
+        ...state,
+        todoList: newTodos,
+      };
+    }
     default:
       return state;
   }

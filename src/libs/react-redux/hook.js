@@ -25,7 +25,7 @@ export const useSelector = (selector) => {
   }, []);
   useEffect(() => {
     const unsubscribe = store.subscribe(() => {
-      setState(store.getState());
+      setState(selector(store.getState()));
     }, []);
     return unsubscribe;
   });
